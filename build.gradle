@@ -1,0 +1,51 @@
+plugins {
+    id 'java'
+}
+
+group 'org.example'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server
+    compile group: 'org.eclipse.jetty', name: 'jetty-server', version: '9.4.30.v20200611'
+
+    // https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-servlet
+    compile group: 'org.eclipse.jetty', name: 'jetty-servlet', version: '9.4.30.v20200611'
+
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-core
+    compile group: 'org.apache.logging.log4j', name: 'log4j-core', version: '2.13.3'
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-api
+    compile group: 'org.apache.logging.log4j', name: 'log4j-api', version: '2.13.3'
+    // https://mvnrepository.com/artifact/org.apache.logging.log4j/log4j-slf4j-impl
+    testCompile group: 'org.apache.logging.log4j', name: 'log4j-slf4j-impl', version: '2.13.3'
+    // https://mvnrepository.com/artifact/org.slf4j/log4j-over-slf4j
+    compile group: 'org.slf4j', name: 'log4j-over-slf4j', version: '1.7.30'
+    // https://mvnrepository.com/artifact/commons-logging/commons-logging
+    compile group: 'commons-logging', name: 'commons-logging', version: '1.2'
+
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-configuration2
+    compile group: 'org.apache.commons', name: 'commons-configuration2', version: '2.7'
+
+    // https://mvnrepository.com/artifact/commons-configuration/commons-configuration
+    compile group: 'commons-configuration', name: 'commons-configuration', version: '1.10'
+    // https://mvnrepository.com/artifact/com.github.stephenc.high-scale-lib/high-scale-lib
+    compile group: 'com.github.stephenc.high-scale-lib', name: 'high-scale-lib', version: '1.1.4'
+
+    // https://mvnrepository.com/artifact/io.buji/buji-pac4j
+    compile group: 'io.buji', name: 'buji-pac4j', version: '5.0.1'
+
+    // https://mvnrepository.com/artifact/org.pac4j/pac4j-oauth
+    compile group: 'org.pac4j', name: 'pac4j-oauth', version: '4.0.3'
+
+    // https://mvnrepository.com/artifact/org.pac4j/pac4j-jwt
+    compile group: 'org.pac4j', name: 'pac4j-jwt', version: '4.0.3'
+
+
+    implementation files('/zserver/java/lib/jzcommon-corelib-1.2.3.0.jar')
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
